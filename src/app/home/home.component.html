@@ -1,0 +1,9 @@
+<h1>Home</h1>
+<p>Test login</p>
+<div>
+    User from secure api
+    <ul>
+        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+    </ul>
+</div>
+<p><a [routerLink]="['/login']">Logout</a></p>
