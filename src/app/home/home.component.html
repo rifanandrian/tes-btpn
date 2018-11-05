@@ -1,6 +1,7 @@
 <h1>Home</h1>
 <p>Masuk login</p>
 
-<p *ngIf="user.role == 'admin'"><a [routerLink]="['/profile']">Profile</a></p>
+<button *ngIf="user.role == 'admin'" class="btn btn-primary" [routerLink]="['/profile']">Profile</button>
+<!-- <p *ngIf="user.role == 'admin'"><a [routerLink]="['/profile']">Profile</a></p> -->
 
 <p><a [routerLink]="['/login']">Logout</a></p>

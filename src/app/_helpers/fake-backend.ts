@@ -9,8 +9,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     constructor() { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        let testUsers = [{ id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User', role: 'admin' },
-                         { id: 2, username: 'testMasuk', password: 'testMasuk', firstName: 'TestMasuk', lastName: 'UserMasuk', role: 'user'}
+        let testUsers = [{ id: 1, username: 'admin', password: 'admin', firstName: 'Admin', lastName: 'Admin', role: 'admin' },
+                         { id: 2, username: 'user', password: 'user', firstName: 'User1', lastName: 'User1', role: 'user'}
                         ];
 
 
