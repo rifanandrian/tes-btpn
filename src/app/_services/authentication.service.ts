@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
+    dataBody :any;
     constructor(private http: HttpClient) { }
 
     login(username: string, password: string) {
@@ -12,12 +13,16 @@ export class AuthenticationService {
                 if (user && user.token) {
                     localStorage.setItem('currentUser', JSON.stringify(user));
                 }
-
+                this.dataBody = user;
                 return user;
             }));
     }
 
     logout() {
         localStorage.removeItem('currentUser');
+    }
+
+    getUser() {
+        return this.dataBody;
     }
 }
